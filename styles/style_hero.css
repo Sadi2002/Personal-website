@@ -127,7 +127,7 @@
   }
 
   .hero-text img {
-    bottom: 215px;
+    bottom: 35%;
   }
 
   .hero-text,
@@ -138,7 +138,10 @@
     margin-bottom: 20px;
   }
   .hero-section {
-    justify-content: space-between;
+    justify-content: center;
+  }
+  .hero-image {
+    flex-grow: 1;
   }
 }
 
@@ -148,9 +151,6 @@
   }
   .hero-text h1 {
     font-size: 68px;
-  }
-  .hero-iamge {
-    flex-grow: 1;
   }
 }
 @media (min-width: 1300px) {
