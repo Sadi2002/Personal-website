@@ -1,0 +1,160 @@
+.hero-section {
+  padding: 40px 16px 64px;
+}
+
+.hero-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.hero-text span {
+  color: var(--neutral-700);
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.hero-text h1 {
+  color: var(--neutral-800);
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 49.4px;
+  margin-bottom: 40px;
+}
+
+.hero-text img {
+  position: absolute;
+  max-width: 80%;
+  z-index: -1;
+  bottom: 90px;
+}
+
+.hero-text button {
+  width: 100%;
+  padding: 16px 42px;
+  background-color: var(--neutral-800);
+  font-size: 18px;
+  color: var(--neutral-100);
+  border-radius: 80px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: var(--neutral-100);
+  color: var(--neutral-800);
+  transform: translate3d(0, -6px, 0.01px);
+  box-shadow: 0 4px 20px -5px #14142b26;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 472px;
+}
+
+@media (min-width: 400px) {
+  .hero-text img {
+    bottom: 80px;
+  }
+}
+@media (min-width: 480px) {
+  .hero-text span {
+    font-size: 22px;
+  }
+  .hero-text h1 {
+    font-size: 44px;
+    line-height: 57.2px;
+  }
+  .hero-text button {
+    width: 225px;
+  }
+  section.hero-section {
+    padding: 48px 24px 64px;
+  }
+}
+@media (min-width: 550px) {
+  .hero-text img {
+    bottom: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section.hero-section {
+    padding-top: 55px;
+  }
+  .hero-text span {
+    font-size: 24px;
+  }
+  .hero-text h1 {
+    font-size: 54px;
+    line-height: 1.3em;
+  }
+
+  .hero-text button {
+    padding: 24px 42px;
+  }
+  .hero-text img {
+    bottom: 90px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    display: flex;
+    padding-top: 69px;
+  }
+  .hero-text h1 {
+    text-align: left;
+  }
+  .hero-text {
+    align-items: flex-start;
+  }
+  .hero-image img {
+    max-width: 590px;
+  }
+
+  .hero-text {
+    justify-content: center;
+  }
+
+  .hero-text img {
+    bottom: 215px;
+  }
+
+  .hero-text,
+  .hero-image {
+    max-width: 50%;
+  }
+  .hero-text span {
+    margin-bottom: 20px;
+  }
+  .hero-section {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-text img {
+    bottom: 230px;
+  }
+  .hero-text h1 {
+    font-size: 68px;
+  }
+  .hero-iamge {
+    flex-grow: 1;
+  }
+}
+@media (min-width: 1300px) {
+  .hero-text img {
+    bottom: 240px;
+  }
+}
