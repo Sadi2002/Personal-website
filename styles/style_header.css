@@ -2,13 +2,8 @@
    HEADER STYLING
 =============================== */
 .header {
-  padding: 16px;
-  min-height: 50px;
-  display: flex;
-  align-items: center;
-  background-color: var(--neutral-100);
   position: relative;
-  z-index: 999;
+  min-height: 50px;
 }
 
 .navigation {
@@ -16,11 +11,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 999;
+  padding: 16px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: var(--neutral-100);
 }
 
 .header .logo {
   font-size: 20px;
   font-weight: 400;
+  color: var(--neutral-800);
 }
 
 /* ===============================
@@ -73,6 +76,49 @@
 
 .burger-navigation.active .burger-bottom-line {
   animation: hideBottomBurgerLine 0.7s both;
+}
+
+/* List in navigation */
+.navigation-item {
+  background-color: var(--neutral-100);
+  padding: 22px 24px;
+  position: absolute;
+  top: -226px;
+  left: 0;
+  z-index: 1;
+  border-bottom: 1px solid var(--neutral-400);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.65s;
+}
+
+.navigation-item.active {
+  top: 82px;
+}
+
+.navigation-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.navigation-item li:last-child .navigation-link {
+  margin-top: 16px;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navigation-list a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 18px;
+  display: none;
 }
 
 /* ===============================
@@ -164,5 +210,74 @@
   100% {
     top: calc(50% + 8px);
     transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+/* Responsive */
+
+@media (min-width: 480px) {
+  .navigation-item {
+    gap: 24px;
+    top: -370px;
+    padding-top: 0;
+    padding-bottom: 36px;
+  }
+
+  .header .logo {
+    font-size: 24px;
+  }
+
+  .navigation-item a {
+    font-size: 22px;
+  }
+
+  .navigation-item li:last-child .navigation-link {
+    margin-top: 10px;
+  }
+  .navigation {
+    padding: 20px 24px;
+  }
+  .burger-navigation {
+    width: 56px;
+    height: 56px;
+  }
+
+  .navigation-item.active {
+    top: 96px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation-item {
+    padding: 10px 24px 0px;
+    gap: 36px;
+  }
+
+  .header .logo {
+    font-size: 24px;
+  }
+
+  .navigation-item a {
+    font-size: 22px;
+  }
+
+  .navigation {
+    padding: 27px 24px;
+  }
+  .navigation-item.active {
+    top: 96px;
+  }
+  .navigation-item li:last-child .navigation-link {
+    display: none;
+  }
+  .burger-navigation {
+    width: 64px;
+    height: 64px;
+  }
+  .navigation-item.active {
+    top: 115px;
+  }
+  .navigation-list a {
+    display: flex;
   }
 }
