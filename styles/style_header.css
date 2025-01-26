@@ -1,0 +1,168 @@
+/* ===============================
+   HEADER STYLING
+=============================== */
+.header {
+  padding: 16px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: var(--neutral-100);
+  position: relative;
+  z-index: 999;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* ===============================
+     BURGER NAVIGATION
+  =============================== */
+.burger-navigation {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--neutral-800);
+  position: relative;
+}
+
+/* Burger Lines (Default State) */
+.burger-middle-line,
+.burger-top-line,
+.burger-bottom-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--neutral-100);
+  width: 24px;
+  min-height: 2px;
+  transition: all 0.3s;
+  pointer-events: none;
+  opacity: 1;
+  animation: showMiddleBurgerLine 0.3s 0.1s both;
+}
+
+.burger-top-line {
+  top: calc(50% - 8px);
+  animation: showTopBurgerLine 0.3s 0.1s both;
+}
+
+.burger-bottom-line {
+  top: calc(50% + 8px);
+  animation: showBottomBurgerLine 0.3s 0.1s both;
+}
+
+/* Burger Active State */
+.burger-navigation.active .burger-middle-line {
+  opacity: 0;
+  animation: hideMiddleBurgerLine 0.3s 0.1s both;
+}
+
+.burger-navigation.active .burger-top-line {
+  animation: hideTopBurgerLine 0.7s both;
+}
+
+.burger-navigation.active .burger-bottom-line {
+  animation: hideBottomBurgerLine 0.7s both;
+}
+
+/* ===============================
+     ANIMATIONS: HIDE BURGER LINES
+  =============================== */
+@keyframes hideTopBurgerLine {
+  0% {
+    top: calc(50% - 8px);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  75% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(60deg);
+  }
+  100% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+@keyframes hideMiddleBurgerLine {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hideBottomBurgerLine {
+  0% {
+    top: calc(50% + 8px);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  75% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+  }
+  100% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+/* ===============================
+     ANIMATIONS: SHOW BURGER LINES
+  =============================== */
+@keyframes showTopBurgerLine {
+  0% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  50% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    top: calc(50% - 8px);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes showMiddleBurgerLine {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showBottomBurgerLine {
+  0% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  50% {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    top: calc(50% + 8px);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}

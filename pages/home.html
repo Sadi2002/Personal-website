@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sado Design</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/style_general.css" />
+    <link rel="stylesheet" href="/styles/style_header.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header" data-aos="fade-down" data-aos-duration="1000">
+        <nav class="navigation">
+          <h2 class="logo">SadoDesign</h2>
+          <div class="navigation-list">
+            <div class="burger-navigation">
+              <div class="burger-top-line"></div>
+              <div class="burger-middle-line"></div>
+              <div class="burger-bottom-line"></div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <script src="/interactivity/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 100,
+        once: true,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+/* Font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Zmienne */
+:root {
+  --neutral-600: #777990;
+  --neutral-800: #14142b;
+  --secondary-1: #ebf8ff;
+  --neutral-700: #4e4b66;
+  --secondary-2: #fff5d2;
+  --secondary-3: #f3fbff;
+  --secondary-4: #f3eeff;
+  --neutral-500: #b2b4c4;
+  --neutral-400: #d9dbe9;
+  --neutral-300: #eff0f6;
+  --neutral-200: #f6f7ff;
+  --neutral-100: white;
+}
+
+/* Reset */
+body {
+  min-height: 100vh;
+  background-color: var(--neutral-100);
+  font-family: "Poppins", serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1248px;
+  margin: 0 auto;
+}
