@@ -281,3 +281,12 @@
     display: flex;
   }
 }
+
+@media (min-width: 992px) {
+  .burger-navigation {
+    display: none;
+  }
+  .navigation {
+    padding: 24px 32px;
+  }
+}
