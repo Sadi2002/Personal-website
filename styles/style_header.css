@@ -121,6 +121,11 @@
   display: none;
 }
 
+.navigation-item-desktop {
+  display: none;
+  gap: 40px;
+}
+
 /* ===============================
      ANIMATIONS: HIDE BURGER LINES
   =============================== */
@@ -287,6 +292,19 @@
     display: none;
   }
   .navigation {
-    padding: 24px 32px;
+    padding: 32px 24px;
+  }
+  .navigation-item {
+    border-bottom: none;
+  }
+  .navigation-item-desktop {
+    display: flex;
+  }
+  .navigation-link {
+    font-size: 18px;
+  }
+
+  i {
+    font-size: 22px;
   }
 }
