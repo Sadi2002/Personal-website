@@ -143,6 +143,9 @@
   .hero-image {
     flex-grow: 1;
   }
+  section.hero-section {
+    padding-top: 69px;
+  }
 }
 
 @media (min-width: 1200px) {
